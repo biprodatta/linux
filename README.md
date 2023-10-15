@@ -1,7 +1,7 @@
 # linux
 
 ## java path setup:
-
+```bash
 echo $JAVA_HOME
 export JAVA_HOME=/opt/java/bin
 export PATH=$PATH:$JAVA_HOME
@@ -11,7 +11,7 @@ cd /usr/bin/
 ln -s java /opt/java/bin/java
 ln -s /opt/java/bin/java java
 java -version
-
+```
 
 
 ## use of growpart command to increate aws ec2 volume
