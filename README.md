@@ -34,3 +34,16 @@ tmpfs          tmpfs  7.5G     0  7.5G   0% /dev/shm
 [root@ip-10-20-30-40 ~]# growpart /dev/xvda 1
 CHANGED: partition=1 start=2048 old: size=20962777 end=20964825 new: size=52418047,end=52420095
 ```
+
+## Volume Mount for AWS Linux Server:
+```bash
+sudo file -s /dev/nvme1n1
+mkfs -t ext4 /dev/nvme1n1
+mkdir /sas
+mount /dev/nvme1n1 /sas
+lsblk
+df -h
+vi /etc/fstab
+#ADD BELOW LINE
+/dev/nvme1n1 /sas ext4  defaults,nofail 0 0
+```
